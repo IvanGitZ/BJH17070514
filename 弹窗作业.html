@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹窗</title>
+	<style>
+		/* 标签样式初始化 */
+		body,html{margin:0;padding:0;background:#fff;font-size:14px;font-family:Arial,Helvetica,'STHeiti','Microsoft YaHei','sans-serif'}
+		form,ul,li,p,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+		img{border:0;}
+		ul,li{list-style-type:none;}
+		a{color:#00007F;text-decoration:none;}
+		a:hover{text-decoration:none;}
+		#btn{
+			width: 100px;
+			height: 50px;
+			background: rgb(250,130,82);
+			color: white;
+			text-align: center;		
+			line-height: 50px;	
+		}
+		#btn:hover{
+			background: black;
+		}
+		#bg{
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none;
+		}
+		#content{
+			max-width: 80%;
+			width: 1260px;
+			margin: 20% auto;
+		}
+		#header{
+			height: 70px;
+			width: 100%;
+			background: rgb(250,130,82);
+			color: white;
+		}
+		#header::after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		#header>h2{
+			float: left;
+			margin-left: 20px;
+			line-height: 70px;
+		}
+		#header>a{
+			float: right;
+			line-height: 70px;
+			margin-right: 20px;
+			color: white;
+		}
+		#header>a:hover{
+			color: black;
+		}
+		#center{
+			width: 100%;
+			height: 100%;
+			background: white;
+		}
+		#center>h3{
+			padding: 10px;
+		}
+		#center>p{
+			font-size: 18px;
+			padding: 10px;
+			line-height: 30px;
+		}
+		#footer{
+			height: 50px;
+			width: 100%;
+			background: rgb(250,130,82);
+			color: white;
+			text-align: center;
+			line-height: 50px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="btn">
+		<p id="bp">弹弹弹</p>
+	</div>
+	<div id="bg">
+		<div id="content">
+			<div id="header">
+				<h2>弹窗头部</h2>
+				<a id="mya" href="###">X</a>
+			</div>
+			<div id="center">
+				<h3>这是一个弹窗效果</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi aliquid maiores repudiandae velit voluptas voluptatum quo accusantium nostrum, quia praesentium similique iste voluptatem consequuntur pariatur deleniti corrupti fugit id?</p>
+			</div>
+			<div id="footer">弹窗底部</div>
+		</div>
+	</div>
+</body>
+<script>
+	var btn = document.querySelector("#btn");
+	var bg = document.querySelector("#bg");
+	var mya = document.querySelector("#mya");
+	var content = document.querySelector("#content");
+	btn.onclick = function(){
+		bg.style.display = "block";
+		bg.onclick = function(){
+			bg.style.display = "none";
+		}
+		mya.onclick = function(){
+			bg.style.display = "none";
+		}
+	}
+	content.onclick = function(ev){
+		var e = ev||window.event;
+		e.cancelBubble = true;
+	}
+</script>
+</html>

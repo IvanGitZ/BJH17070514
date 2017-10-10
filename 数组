@@ -1,0 +1,88 @@
+Last login: Tue Oct 10 14:44:45 on ttys000
+zhaoshuai:~ Ivan$ cd /Users/lanou3g/Desktop/git/php 
+zhaoshuai:php Ivan$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+zhaoshuai:php Ivan$ git checkout master
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+zhaoshuai:php Ivan$ git branch lesson-2
+zhaoshuai:php Ivan$ git checkout lesson-2
+Switched to branch 'lesson-2'
+zhaoshuai:php Ivan$ git status
+On branch lesson-2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	conditionals.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zhaoshuai:php Ivan$ git add .
+zhaoshuai:php Ivan$ git commit -m"add file"
+[lesson-2 df15d46] add file
+ 2 files changed, 87 insertions(+), 4 deletions(-)
+ create mode 100644 conditionals.php
+zhaoshuai:php Ivan$ git push origin lesson-2
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1020 bytes | 1020.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/IvanGitZ/php.git
+ * [new branch]      lesson-2 -> lesson-2
+zhaoshuai:php Ivan$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+zhaoshuai:php Ivan$ git checkout lesson-1
+Switched to branch 'lesson-1'
+zhaoshuai:php Ivan$ git checkout lesson-2
+Switched to branch 'lesson-2'
+zhaoshuai:php Ivan$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+zhaoshuai:php Ivan$ git branch lesson-3
+zhaoshuai:php Ivan$ git checkout lesson-3
+M	README.md
+Switched to branch 'lesson-3'
+zhaoshuai:php Ivan$ git status
+On branch lesson-3
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	array.php
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zhaoshuai:php Ivan$ git add .
+zhaoshuai:php Ivan$ git status
+On branch lesson-3
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   README.md
+	new file:   array.php
+
+zhaoshuai:php Ivan$ git commit -m"array"
+[lesson-3 3efbedf] array
+ 2 files changed, 72 insertions(+), 4 deletions(-)
+ create mode 100644 array.php
+zhaoshuai:php Ivan$ git push origin lesson-3
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 895 bytes | 895.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+
