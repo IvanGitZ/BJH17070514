@@ -1,0 +1,390 @@
+Last login: Mon Oct  9 08:56:45 on console
+zhaoziyun:~ ZZY$ git --version
+git version 2.14.1
+zhaoziyun:~ ZZY$ cd /Users/zhaoce/Desktop/Git 
+zhaoziyun:Git ZZY$ cd ..
+zhaoziyun:Desktop ZZY$ cd ~
+zhaoziyun:~ ZZY$ ls
+Applications		HBuilder		Music
+Desktop			HBuilderProjects	Pictures
+Documents		Library			Public
+Downloads		Movies
+zhaoziyun:~ ZZY$ cd Desktop/Git/
+zhaoziyun:Git ZZY$ clear
+
+
+
+
+
+
+
+
+
+
+
+zhaoziyun:Git ZZY$ git clone https://github.com/OceanWoo/codeforgit.git
+Cloning into 'codeforgit'...
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+zhaoziyun:Git ZZY$ cd ~
+zhaoziyun:~ ZZY$ cd Desktop/git/
+zhaoziyun:git ZZY$ git clone https://github.com/OceanWoo/codeforgit.git
+Cloning into 'codeforgit'...
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
+zhaoziyun:git ZZY$ cd /Users/zhaoce/Desktop/myapp 
+zhaoziyun:myapp ZZY$ touch index.html
+zhaoziyun:myapp ZZY$ touch app.js
+zhaoziyun:myapp ZZY$ git init
+Initialized empty Git repository in /Users/zhaoce/Desktop/myapp/.git/
+zhaoziyun:myapp ZZY$ defaults write com.apple.Finder AppleShowAllFiles Yes && killall Finder
+zhaoziyun:myapp ZZY$ git config --global user.name 'ZiYunnn'
+zhaoziyun:myapp ZZY$ git config --global user.email '852213200@qq.com'
+zhaoziyun:myapp ZZY$ defaults write com.apple.Finder AppleShowAllFiles No && killall Finder
+zhaoziyun:myapp ZZY$ git add index.html
+zhaoziyun:myapp ZZY$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	app.js
+
+zhaoziyun:myapp ZZY$ git rm --cached index.html
+rm 'index.html'
+zhaoziyun:myapp ZZY$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	app.js
+	index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+zhaoziyun:myapp ZZY$ git add *.html
+zhaoziyun:myapp ZZY$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	app.js
+
+zhaoziyun:myapp ZZY$ git rm --cached index.html
+rm 'index.html'
+zhaoziyun:myapp ZZY$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	app.js
+	index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+zhaoziyun:myapp ZZY$ git add .
+zhaoziyun:myapp ZZY$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   app.js
+	new file:   index.html
+
+zhaoziyun:myapp ZZY$ git commit
+[master (root-commit) 082166f] add files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 app.js
+ create mode 100644 index.html
+zhaoziyun:myapp ZZY$ git status
+On branch master
+nothing to commit, working tree clean
+zhaoziyun:myapp ZZY$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   app.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zhaoziyun:myapp ZZY$ git add .
+zhaoziyun:myapp ZZY$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   app.js
+
+zhaoziyun:myapp ZZY$ git commit -m 'modified app.js'
+[master a6f48ef] modified app.js
+ 1 file changed, 1 insertion(+)
+zhaoziyun:myapp ZZY$ touch .gitignore
+zhaoziyun:myapp ZZY$ touch log.txt
+zhaoziyun:myapp ZZY$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+	log.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+zhaoziyun:myapp ZZY$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+zhaoziyun:myapp ZZY$ git add .
+zhaoziyun:myapp ZZY$ git add .
+zhaoziyun:myapp ZZY$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   .gitignore
+
+zhaoziyun:myapp ZZY$ git commit -m 'add file'
+[master 3d10da1] add file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+zhaoziyun:myapp ZZY$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	dir1/
+	dir2/
+
+nothing added to commit but untracked files present (use "git add" to track)
+zhaoziyun:myapp ZZY$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	dir1/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zhaoziyun:myapp ZZY$ git add .
+zhaoziyun:myapp ZZY$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   .gitignore
+	new file:   dir1/app1.js
+
+zhaoziyun:myapp ZZY$ git commit -m 'add files'
+[master c01b71d] add files
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 dir1/app1.js
+zhaoziyun:myapp ZZY$ git status
+On branch master
+nothing to commit, working tree clean
+zhaoziyun:myapp ZZY$ git branch login
+zhaoziyun:myapp ZZY$ git checkout login
+Switched to branch 'login'
+zhaoziyun:myapp ZZY$ touch login.html
+zhaoziyun:myapp ZZY$ git status
+On branch login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	login.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+zhaoziyun:myapp ZZY$ git add .
+zhaoziyun:myapp ZZY$ git commit -m 'add file'
+[login 2311dec] add file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 login.html
+zhaoziyun:myapp ZZY$ git status
+On branch login
+nothing to commit, working tree clean
+zhaoziyun:myapp ZZY$ git checkout master
+Switched to branch 'master'
+zhaoziyun:myapp ZZY$ git checkout login
+Switched to branch 'login'
+zhaoziyun:myapp ZZY$ git status
+On branch login
+nothing to commit, working tree clean
+zhaoziyun:myapp ZZY$ clear
+
+zhaoziyun:myapp ZZY$ git status
+On branch login
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   login.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+zhaoziyun:myapp ZZY$ git add .
+zhaoziyun:myapp ZZY$ git commit -m 'add file'
+[login abd89f2] add file
+ 1 file changed, 13 insertions(+)
+zhaoziyun:myapp ZZY$ git checkout master
+Switched to branch 'master'
+zhaoziyun:myapp ZZY$ git merge login
+Updating c01b71d..abd89f2
+Fast-forward
+ login.html | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 login.html
+zhaoziyun:myapp ZZY$ git status
+On branch master
+nothing to commit, working tree clean
+zhaoziyun:myapp ZZY$ clear 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+zhaoziyun:myapp ZZY$ cd ~
+zhaoziyun:~ ZZY$ cd /Users/zhaoce/Desktop/myapp 
+zhaoziyun:myapp ZZY$ git status
+On branch master
+nothing to commit, working tree clean
+zhaoziyun:myapp ZZY$ git remote
+zhaoziyun:myapp ZZY$ git remote add origin https://github.com/ZiYunnn/BJH17070513.git
+zhaoziyun:myapp ZZY$ git remote
+origin
+zhaoziyun:myapp ZZY$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+zhaoziyun:myapp ZZY$ git push -u origin master
+Username for 'https://github.com': ZiYunnn
+Password for 'https://ZiYunnn@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/ZiYunnn/BJH17070513.git/'
+zhaoziyun:myapp ZZY$ git push -u origin master
+Username for 'https://github.com': ZiYunnn
+Password for 'https://ZiYunnn@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/ZiYunnn/BJH17070513.git/'
+zhaoziyun:myapp ZZY$ ZiYunnn
+-bash: ZiYunnn: command not found
+zhaoziyun:myapp ZZY$ git push -u origin master
+Username for 'https://github.com': ZiYunnn
+Password for 'https://ZiYunnn@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/ZiYunnn/BJH17070513.git/'
+zhaoziyun:myapp ZZY$ git push -u origin master
+Username for 'https://github.com': ZiYun
+Password for 'https://ZiYun@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/ZiYunnn/BJH17070513.git/'
+zhaoziyun:myapp ZZY$ git push -u origin master
+Username for 'https://github.com': ZiYunnn
+Password for 'https://ZiYunnn@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/ZiYunnn/BJH17070513.git/'
+zhaoziyun:myapp ZZY$ git push -u origin master
+Username for 'https://github.com': ZiYunnn
+Password for 'https://ZiYunnn@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/ZiYunnn/BJH17070513.git/'
+zhaoziyun:myapp ZZY$ git push -u origin master
+Username for 'https://github.com': ZiYunnn
+Password for 'https://ZiYunnn@github.com': 
+Counting objects: 19, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (19/19), 1.65 KiB | 847.00 KiB/s, done.
+Total 19 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/ZiYunnn/BJH17070513.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+zhaoziyun:myapp ZZY$ clear
+
+zhaoziyun:myapp ZZY$ git branch lesson-1
+zhaoziyun:myapp ZZY$ git checkout lesson-1
+Switched to branch 'lesson-1'
+zhaoziyun:myapp ZZY$ touch README.md
+zhaoziyun:myapp ZZY$ ls
+README.md	app.js		dir1		dir2		index.html	log.txt		login.html
+zhaoziyun:myapp ZZY$ git status
+On branch lesson-1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+zhaoziyun:myapp ZZY$ git add .
+zhaoziyun:myapp ZZY$ git commit -m 'readme'
+[lesson-1 cbeb6c5] readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+zhaoziyun:myapp ZZY$ git remode
+git: 'remode' is not a git command. See 'git --help'.
+
+The most similar command is
+	remote
+zhaoziyun:myapp ZZY$ git remote
+origin
+zhaoziyun:myapp ZZY$ git push -u origin lesson-1
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/ZiYunnn/BJH17070513.git
+ * [new branch]      lesson-1 -> lesson-1
+Branch lesson-1 set up to track remote branch lesson-1 from origin.
+zhaoziyun:myapp ZZY$ 
+
+
+
+
